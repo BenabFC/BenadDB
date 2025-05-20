@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { apiService } from "../services/apiService.js";
 import { useNavigate } from "react-router-dom";  // React Router for navigation
 import './css/LoginPage.css'
-import logo from '/chelsea.png';
+import logo from '/benab.png';
 import './css/responsive/LoginPage.css'
 import LoadingScreen from "./Loading.jsx";
 
@@ -26,6 +26,8 @@ const LoginPage = () => {
       if (response) {
         // Store the token (optional - for authentication purposes)
         localStorage.setItem("jwtToken", response["token"]);
+        localStorage.setItem("_id", response["scoutId"]);
+        localStorage.setItem("name", response["name"]);
 
         // Redirect to the dashboard page after successful login
         navigate("/dashboard", { state: { message: response["scoutId"] , _scoutName: response["name"]} });
@@ -45,8 +47,8 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="welcome-logo">
         <img src={logo} alt="" />
-        <h1 >Achirou BlueCo</h1>
-        <h1>Elite Scouting</h1>
+        <h1 >BENAB</h1>
+        <h2>Football Club Database</h2>
       </div>
       <div className="login-box">
         {loading && <LoadingScreen/>}

@@ -15,15 +15,14 @@ const Dashboard = () => {
   const location = useLocation();
   const [loginId, setLoginId] = useState(); 
   const [scoutName, setScoutName] = useState(); 
-  // const scoutName = location.state?._scoutName; // Access the state passed via navigate
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [selectedComponent, setSelectedComponent] = useState('A');
 
   useEffect(() => {
     // const location = useLocation();
-    setLoginId(location.state?.message);
-    setScoutName(location.state?._scoutName); // Access the state passed via navigate
+    setLoginId(localStorage.getItem('_id'));
+    setScoutName(localStorage.getItem('name')); // Access the state passed via navigate
 
     const verifyToken = async () => {
         const token = localStorage.getItem('jwtToken');
@@ -35,6 +34,8 @@ const Dashboard = () => {
             navigate("/dashboard");
         } catch (error) {
             localStorage.removeItem('jwtToken'); // Clear invalid token
+            localStorage.removeItem("_id");  // Remove _id token
+            localStorage.removeItem("name");  // Remove name token
             navigate('/'); // Redirect to homepage
         }
     };
@@ -47,8 +48,10 @@ const Dashboard = () => {
     const resetTimer = () => {
         clearTimeout(timer);
         timer = setTimeout(() => {
-            localStorage.removeItem('jwtToken'); // Clear token
-            window.location.href = '/'; // Redirect to homepage
+          localStorage.removeItem('jwtToken'); // Clear token
+          localStorage.removeItem("_id");  // Remove _id token
+          localStorage.removeItem("name");  // Remove name token    
+          window.location.href = '/'; // Redirect to homepage
         }, 5 * 60 * 1000); // 5 minutes inactivity
     };
 
@@ -83,8 +86,9 @@ const Dashboard = () => {
     }
   }
   const handleLogout = () => {
-    
     localStorage.removeItem("jwtToken");  // Remove JWT token
+    localStorage.removeItem("_id");  // Remove _id token
+    localStorage.removeItem("name");  // Remove name token
     navigate("/");  // Redirect back to login page
   };
 
@@ -98,8 +102,8 @@ const Dashboard = () => {
       <div className="dash holder">
         <div className='sidebar'>
           <div className="logo">
-              <img src="/chelsea.png" alt="" />
-              <h4>Achirou BlueCo</h4>
+              <img src="/benab.png" alt="" />
+              <h4>Benab FC Database</h4>
           </div>
           <ul>
               <li onClick={() => handleComponentChange(`A`)}>

@@ -26,7 +26,7 @@
 }
 
 .sidebar > ul > li {
-    color: var(--altText);
+    color: var(--text);
     margin-bottom: 20px;
     display: flex;
     align-items: center;

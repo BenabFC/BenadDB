@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import './css/EvaluationView.css'
-import viteLogo from '/vite.svg';
 import { apiService } from "../services/apiService.js";
 import ExportStyledPDF from './ExportStyledPDF.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -156,7 +155,7 @@ const EvaluationView = ({player}) => {
 
         <div className="view_evaluation">
             <div className="player-evaluation">
-            <h3>Evaluation Metrics</h3>
+            <h2>Evaluation Metrics</h2>
             <div  className="evaluation-metrics">
                 {isRate && renderEvaluation()} 
             </div>

@@ -17,23 +17,13 @@
     scrollbar-width: none; /* For Firefox */
   }
 
-  --primary: #3aabd1;
+  --primary: #12a705;
   --seocondary: #fafafa;
-  --hover: #769fc2;
-  --filter: #292880;
-  --text: #ebebeb;
-  --altText: #002a65;
+  --hover: #f8a01b;
+  --filter: #b0ffa6;
+  --text: #072500;
+  --altText: #086500;
   --bkg: #fcfcfc;
-
-  /* --primary: #010e09;
-  --seocondary: #fafafa;
-  --hover: #035a3d#002a65;
-  --filter: #288062;
-  --text: #ccc;
-  --altText: #1c1c1c;
-  --bkg: #fff; */
-
-
 }
 
 li{
@@ -51,6 +41,10 @@ a:hover {
 
 h1,h2,h3,p,h5{
   margin: 0;
+}
+
+h1{
+  color: var(--altText);
 }
 
 h2{
@@ -80,6 +74,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   background-color: var(--hover);
   color: white;

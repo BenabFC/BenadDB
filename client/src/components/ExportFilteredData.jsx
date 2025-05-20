@@ -2,7 +2,7 @@ import React, { useState , useEffect} from 'react';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import './css/ExportFilteredData.css'
-import logo from '/African Talent.png';
+import logo from '/benab.png';
 
 
 const PlayerListPDF = ({players, gotoDash}) => {
@@ -35,7 +35,7 @@ const PlayerListPDF = ({players, gotoDash}) => {
     // Title and Subtitle
     doc.setFontSize(25);
     doc.setTextColor(60);
-    doc.text("Achirou BlueCo Elite Scouting", startX, startY, { align: "center" });
+    doc.text("Benab FC Database", startX, startY, { align: "center" });
 
     doc.setFontSize(12);
     doc.setTextColor(100);
@@ -53,7 +53,7 @@ const PlayerListPDF = ({players, gotoDash}) => {
     doc.autoTable({
       startY: 60, // Start below the user text
       head: [['#', 'Name', 'Date of Birth', 'Position', 'Nationality', 'Scouted By', 'Status']],
-      headStyles: { fillColor: [10, 10, 10], textColor: 255, fontSize: 14 },
+      headStyles: { fillColor: [50, 180, 50], textColor: 255, fontSize: 14 },
       bodyStyles: { fontSize: 10 },
       styles: { halign: "center" },
       body: data.map((player, index) => [
@@ -68,7 +68,7 @@ const PlayerListPDF = ({players, gotoDash}) => {
     });
 
     // Save the PDF
-    doc.save('Achirou BlueCo Elite Scouting Summary Report.pdf');
+    doc.save('Benab FC Database Summary Report.pdf');
     gotoDash();
   };
 

@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMale, faFemale } from '@fortawesome/free-solid-svg-icons';
 import './css//Header.css'; // import the CSS file for styling
 
-import viteLogo from '/vite.svg';
-
 // const Header = ({ userAvatar }) => {
 const Header = () => {
   return (

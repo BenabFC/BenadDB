@@ -32,7 +32,7 @@
 
 .avatar_section .user-icon{
   font-size: 1.3rem;
-  color: var(--altText);
+  color: var(--text);
 }
 
 /* Filter section with icons */
@@ -114,6 +114,7 @@
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
     text-align: center;
+    color: var(--text);
   }
   
   th {
