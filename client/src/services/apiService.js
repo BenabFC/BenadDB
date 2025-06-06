@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// const apiUrl = "https://benaddb.onrender.com";
-const apiUrl = "http://localhost:3000";
-
+const apiUrl = "https://benaddb.onrender.com";
+//const apiUrl = "http://localhost:3000";
 
 // Base URL for your backend API 
 const API_BASE_URL = apiUrl;
