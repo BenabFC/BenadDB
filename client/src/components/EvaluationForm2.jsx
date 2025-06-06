@@ -53,8 +53,13 @@ const EvaluationForm2 = ({newPlayerId}) => {
         <div className="dialogStyles">
           <div className="dialogContent">
             <p>Player Details Successfully Updated</p>
-            <button onClick={() => setShowDialog(false)}>Close</button>
-          </div>
+            <button onClick={() => {
+                          setShowDialog(false);
+                          window.location.reload();
+                        }}>
+              Close
+            </button>          
+            </div>
         </div>
       )}
 
