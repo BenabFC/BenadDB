@@ -195,6 +195,15 @@ const AddForm = ({scoutName}) => {
 
   return(
     <div className="add-form-container">
+    {showDialog && (
+        <div className="addDialog">
+          <div className="dialogContent">
+            <h3>Some Fields must be filled</h3>
+            <p>[Nationality, Status, Gender, Preferred Foot, Position]</p>
+            <button onClick={() => setShowDialog(false)}>Close</button>
+          </div>
+        </div>
+      )}
       
     <div className="form-wrapper" style={{ transform: `translateX(-${step * 50}%)`}}>
       {/* Form 1 */}
