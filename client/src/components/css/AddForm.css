@@ -157,16 +157,15 @@
     z-index: 99999;
     height: 100vh;
   }
-  
-  .dialogContent{
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dialogContent > button{
+
+.dialogContent{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dialogContent > button{
     margin-top: 1.3rem;
   }
-  
