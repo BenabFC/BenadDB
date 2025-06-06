@@ -113,7 +113,7 @@ const AddForm = ({scoutName}) => {
     // Automatically close the dialog after 2 seconds
     setTimeout(() => {
       setShowDialog(false);
-    }, 2000);
+    }, 22000);
   }
 
   // Handle form submission
@@ -127,6 +127,7 @@ const AddForm = ({scoutName}) => {
       setFlagMessage("Kindly enter all the details of the player");
       setIsVisible(true);
       setLoading(false);
+      handleDialog();
     } else {
       const countrySearch = africanCountries.find((africanCountry) => africanCountry.name === playerData.nationality);
     
@@ -198,7 +199,7 @@ const AddForm = ({scoutName}) => {
     {showDialog && (
         <div className="addDialog">
           <div className="dialogContent">
-            <h3>Some Fields must be filled</h3>
+            <h3>Kindly enter all the details of the player</h3>
             <p>[Nationality, Status, Gender, Preferred Foot, Position]</p>
             <button onClick={() => setShowDialog(false)}>Close</button>
           </div>
