@@ -1,8 +1,6 @@
 import axios from "axios";
 
-// const apiUrl = "https://intrepidscouting.onrender.com";
 const apiUrl = "https://benaddb.onrender.com";
-
 
 // Base URL for your backend API 
 const API_BASE_URL = apiUrl;
