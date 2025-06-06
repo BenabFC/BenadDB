@@ -1,0 +1,1 @@
+mongodb+srv://benabfcdb:vCM4z5pnxmDzHScX@database.glaavn9.mongodb.net/?retryWrites=true&w=majority&appName=Database
